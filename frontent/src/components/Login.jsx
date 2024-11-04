@@ -146,7 +146,7 @@ const Login = () => {
                 setTimeout(() => handleFormSubmit(e),0);
                 setTimeout(() => {
                     navigate('/profile')
-                }, 1500)
+                }, 1000)
             } else if (error) {
                 const details = error?.details[0].message;
                 handleError(details);
