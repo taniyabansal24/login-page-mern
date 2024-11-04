@@ -117,7 +117,6 @@ const Login = () => {
 
   const handleChange = (e) => {
       const {name, value} = e.target;
-      console.log(name, value);  
       const copyLoginInfo = { ...loginInfo };
       copyLoginInfo[name] = value;
       setLoginInfo(copyLoginInfo);
@@ -146,7 +145,7 @@ const Login = () => {
                 setTimeout(() => handleFormSubmit(e),0);
                 setTimeout(() => {
                     navigate('/profile')
-                }, 1000)
+                }, 900)
             } else if (error) {
                 const details = error?.details[0].message;
                 handleError(details);
@@ -155,7 +154,6 @@ const Login = () => {
                 handleError(message);
                 return false;
             }
-            console.log(result);
         } catch (err) {
             handleError(err.message);
             // return false; // Return false if there’s an exception
