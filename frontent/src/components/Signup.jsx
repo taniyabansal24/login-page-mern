@@ -130,7 +130,7 @@ const Signup = () => {
         return handelError('Name, Email and Password are required')
     }
     try{
-        const url = "http://localhost:8080/auth/signup";
+        const url = "https://login-page-mern-api.vercel.app/auth/signup";
         const response = await fetch(url, {
             method: "POST",
             headers: {
