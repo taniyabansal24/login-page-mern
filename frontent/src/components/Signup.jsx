@@ -140,6 +140,7 @@ const Signup = () => {
         const result = await response.json();
             const { success, message, error } = result;
             if (success) {
+              handleSuccess(message);
                 setTimeout(() => handleFormSubmit(e),0);
                 setTimeout(() => {
                     navigate('/login')
