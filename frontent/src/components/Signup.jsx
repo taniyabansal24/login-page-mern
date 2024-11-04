@@ -256,7 +256,7 @@ const Signup = () => {
               className="btn-text"
               style={{ display: isLoading ? "none" : "inline" }}
             >
-              Login
+              Signup
             </span>
             <span
               className="loading-icon"
