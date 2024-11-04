@@ -111,13 +111,12 @@ const Signup = () => {
       logo.classList.remove("move");
       setTimeout(() => {
         logo.classList.add("logo_close");
-      }, 1000);
+      }, 900);
     }, 0);
   };
 
   const handleChange = (e) => {
       const {name, value} = e.target;
-      console.log(name, value);  
       const copySignupInfo = { ...signupInfo };
       copySignupInfo[name] = value;
       setSignupInfo(copySignupInfo);
@@ -144,7 +143,7 @@ const Signup = () => {
                 setTimeout(() => handleFormSubmit(e),0);
                 setTimeout(() => {
                     navigate('/login')
-                }, 1000)
+                }, 900)
             } else if (error) {
                 const details = error?.details[0].message;
                 handleError(details);
@@ -153,7 +152,6 @@ const Signup = () => {
                 handleError(message);
                 return false;
             }
-            console.log(result);
         } catch (err) {
             handleError(err.message);
             // return false; // Return false if there’s an exception
@@ -310,7 +308,7 @@ const Signup = () => {
               className="btn-text"
               style={{ display: isLoading ? "none" : "inline" }}
             >
-              Login
+              Signup
             </span>
             <span
               className="loading-icon"
