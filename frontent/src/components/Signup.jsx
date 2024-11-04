@@ -144,7 +144,7 @@ const Signup = () => {
                 setTimeout(() => handleFormSubmit(e),0);
                 setTimeout(() => {
                     navigate('/login')
-                }, 0)
+                }, 1000)
             } else if (error) {
                 const details = error?.details[0].message;
                 handleError(details);
